@@ -6,7 +6,10 @@ This is a research project, so it is not yet ready to be used in production and 
 
 This repository is dedicated to French Language. However, some features can be used for other languages but you have to check the code.
 
-contact: psycholinguistic2125@gmail.com
+You will need to create a .pkl file containing  Morph, pos, token and lemma colmums. You can do it using this repo: https://github.com/binbin83/nlp_pipeline
+
+
+**contact:** psycholinguistic2125@gmail.com
 
 ![](./data/image/text_features_pipeline.png)
 
@@ -137,7 +140,11 @@ Now we have 4 NER custom models:
 - **DEATH_MODEL**: detect the lexical field associated to death (explicit and implicit mentions)
 - **SENSATIONS_MODEL**: detect the lexical field associated with the body, sensation and perception
 
-Models are available on demands.
+Models are available on huggingface hubs: 
+- https://huggingface.co/binbin83/fr_present_tense_value
+- https://huggingface.co/binbin83/fr_on_value
+- https://huggingface.co/binbin83/fr_sensations_and_body
+- https://huggingface.co/binbin83/fr_lexical_death
 
 
 

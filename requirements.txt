@@ -16,3 +16,4 @@ pyyaml
 transformers
 termcolor
 seaborn
+torch

@@ -1,18 +1,19 @@
 data:
-  nlp_folder : './data/corpus'
-  nlp_filename : 'presidents_interview.pkl'
+  nlp_folder : '/home/robin/Code_repo/psycholinguistic2125/text_feature_toolbox/data/corpus'
+  nlp_filename : 'campagne_2017_spacy_nlp_data.pkl'
   interpretation_folder : "./data/interpretations"
-  features_folder : "./data"
+  features_folder : "/home/robin/Code_repo/psycholinguistic2125/text_feature_toolbox/data/features"
   features_filename : "features.csv"
+  filter_data : False
   filter :
     selected_col : ['token', 'lemma', "pos", "morph"]
     
 
 features :
-  features_choices : ["custom_ner"] #"readability","custom_ner","passive",'graph',"sentiment","morph","tag","coherence","dysfluences"]
+  features_choices : ["sentiment"] #"readability","custom_ner","passive",'graph',"sentiment","morph","tag","coherence","dysfluences"]
 
   sentiments :
-    resources_path : "./data/sentiments"
+    resources_path : "/home/robin/Code_repo/psycholinguistic2125/text_feature_toolbox/data/sentiments"
   
   coherence :
     model_type : "lda"
@@ -24,7 +25,7 @@ features :
     n_process : 1
 
   ner :
-    models_folder : "./models/ner"
+    models_folder : "/home/robin/Code_repo/psycholinguistic2125/text_feature_toolbox/models/ner"
     use_gpu : True
     task_names : ["mort", "on", "present","sensations"]
     task_labels:
@@ -35,8 +36,8 @@ features :
 
 
 embeddings :
-  saving_folder : "./models/embeddings"
-  model_name : "model_name"
+  saving_folder : "/home/robin/Code_repo/psycholinguistic2125/text_feature_toolbox/models/embeddings"
+  model_name : "president_2017"
   model_type : "lda"
   no_below : 1
   no_above : 0.8
