@@ -1,3 +1,6 @@
+[![Code style: black](https://img.shields.io/badge/Code%20Style-Black-black)](https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html)
+
+
 # TEXT FEATURES TOOLBOX
 
 Extract various information for textual data in order to analyze it with machine learning or statistical tools
