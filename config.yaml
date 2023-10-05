@@ -1,0 +1,71 @@
+data:
+  nlp_folder : './data/corpus'
+  nlp_filename : 'presidents_interview.pkl'
+  interpretation_folder : "./data/interpretations"
+  features_folder : "./data"
+  features_filename : "features.csv"
+  filter :
+    selected_col : ['token', 'lemma', "pos", "morph"]
+    
+
+features :
+  features_choices : ["custom_ner"] #"readability","custom_ner","passive",'graph',"sentiment","morph","tag","coherence","dysfluences"]
+
+  sentiments :
+    resources_path : "./data/sentiments"
+  
+  coherence :
+    model_type : "lda"
+    chunk_size : 200
+    train : True
+  
+  passive :
+    passive_model : "fr_dep_news_trf"
+    n_process : 1
+
+  ner :
+    models_folder : "./models/ner"
+    use_gpu : True
+    task_names : ["mort", "on", "present","sensations"]
+    task_labels:
+      on_labels : ['ON_GENERIQUE', 'ON_NOUS', 'ON_QUELQU_UN']
+      mort_labels : ['MORT_IMPLICITE', 'MORT_EXPLICITE']
+      sensations_labels : ['VERB_PERCEPTIONS_SENSORIELLES','CORPS', "NOM_PERCEPTIONS_SENSORIELLES", "SENSATIONS_PHYSIQUES"]
+      present_labels : ['PRESENT_ENNONCIATION',  'PRESENT_GENERIQUE',  'PRESENT_HISTORIQUE']
+
+
+embeddings :
+  saving_folder : "./models/embeddings"
+  model_name : "model_name"
+  model_type : "lda"
+  no_below : 1
+  no_above : 0.8
+  doc2vec :
+    vector_size : 300
+    min_count : 2
+    epochs : 10
+  fasttext :
+    vector_size : 300
+    window : 5
+    min_count : 2
+    epochs : 20
+    workers : 15
+  word2vec :
+    vector_size : 100
+    window : 5
+    min_count : 2
+    epochs : 10
+    workers : 15
+  lsi :
+    num_topics : 30
+    onepass : False
+  lda :
+    num_topics : 100
+    passes : 10
+    random_state : 42
+  elda :
+    num_topics : 100
+    num_models : 3
+    random_state : 42
+  hdp :
+    random_state : 42
